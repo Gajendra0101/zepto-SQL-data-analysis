@@ -58,6 +58,8 @@ Here’s a step-by-step breakdown of what we do in this project:
 
 1. Database & Table Creation
 We start by creating a SQL table with appropriate data types:
+
+```sql
 CREATE TABLE zepto (
     sku_id SERIAL PRIMARY KEY,
     category VARCHAR(120),
@@ -74,69 +76,58 @@ CREATE TABLE zepto (
 
 ---
 
-## 📥 Data Import
+## 2. Data Import
+Loaded CSV using pgAdmin's import feature.
 
-The dataset was imported using PostgreSQL and pgAdmin.
-
-### Using PostgreSQL COPY Command
+If you're not able to use the import feature, write this code instead:
 
 ```sql
-\copy zepto(
-    category,
-    name,
-    mrp,
-    discountPercent,
-    availableQuantity,
-    discountedSellingPrice,
-    weightInGms,
-    outOfStock,
-    quantity
-)
-FROM 'data/zepto_v2.csv'
-WITH (
-    FORMAT csv,
-    HEADER true,
-    DELIMITER ',',
-    QUOTE '"',
-    ENCODING 'UTF8'
-);
+   \copy zepto(category,name,mrp,discountPercent,availableQuantity,
+            discountedSellingPrice,weightInGms,outOfStock,quantity)
+  FROM 'data/zepto_v2.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', QUOTE '"', ENCODING 'UTF8');
 ```
 
-### Common Issue
+* Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file using CSV UTF-8 format.
 
-If you encounter UTF-8 encoding errors:
+### 3. 🔍 Data Exploration
+Counted the total number of records in the dataset
 
-1. Open the CSV file in Excel.
-2. Select **Save As**.
-3. Choose **CSV UTF-8 (Comma Delimited)** format.
-4. Re-import the dataset.
+Viewed a sample of the dataset to understand structure and content
 
----
+Checked for null values across all columns
 
-## 🔍 Exploratory Data Analysis (EDA)
+Identified distinct product categories available in the dataset
 
-The following analyses were performed:
+Compared in-stock vs out-of-stock product counts
 
-* Total number of records
-* Sample data inspection
-* Null value checks
-* Category exploration
-* Stock availability analysis
-* Duplicate product identification
-* SKU distribution analysis
-
-### Example Questions Answered
-
-* How many products exist in the catalog?
-* Which categories contain the most products?
-* How many products are currently out of stock?
-* Which products appear multiple times under different SKUs?
+Detected products present multiple times, representing different SKUs
 
 ---
 
-## 🧹 Data Cleaning
+## 4. 🧹 Data Cleaning
+Identified and removed rows where MRP or discounted selling price was zero
 
-To improve data quality:
+Converted mrp and discountedSellingPrice from paise to rupees for consistency and readability
+
+--
+
+### 5. 📊 Business Insights
+Found top 10 best-value products based on discount percentage
+
+Identified high-MRP products that are currently out of stock
+
+Estimated potential revenue for each product category
+
+Filtered expensive products (MRP > ₹500) with minimal discount
+
+Ranked top 5 categories offering highest average discounts
+
+Calculated price per gram to identify value-for-money products
+
+Grouped products based on weight into Low, Medium, and Bulk categories
+
+Measured total inventory weight per product category
+---
 
 ### Data Quality Checks
 
@@ -156,46 +147,6 @@ SET
     mrp = mrp / 100.0,
     discountedSellingPrice = discountedSellingPrice / 100.0;
 ```
-
----
-
-## 📊 Business Analysis & Insights
-
-### 1. Top Discounted Products
-
-Identify products offering the highest discounts.
-
-### 2. Premium Products Out of Stock
-
-Find high-value products currently unavailable.
-
-### 3. Potential Revenue Analysis
-
-Estimate inventory value by category.
-
-### 4. Expensive Products with Low Discounts
-
-Identify premium products with minimal promotional activity.
-
-### 5. Categories with Highest Average Discounts
-
-Rank categories by average discount percentage.
-
-### 6. Best Value Products
-
-Calculate price per gram to identify cost-effective products.
-
-### 7. Product Weight Segmentation
-
-Classify products into:
-
-* Low Weight
-* Medium Weight
-* Bulk Weight
-
-### 8. Inventory Weight Analysis
-
-Measure total inventory weight across categories.
 
 ---
 
@@ -235,41 +186,35 @@ Zepto-SQL-Data-Analysis/
 ├── zepto_SQL_data_analysis.sql
 │
 ├── README.md
-│
-└── screenshots/
 ```
 
 ---
 
-## 🚀 How to Run This Project
-
-### Step 1
-
-Clone the repository:
+## 🛠️ How to Use This Project
+Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/Zepto-SQL-Data-Analysis.git
+git clone https://github.com/amlanmohanty/zepto-SQL-data-analysis-project.git
+cd zepto-SQL-data-analysis-project
 ```
 
-### Step 2
+Open zepto_SQL_data_analysis.sql
 
-Create a PostgreSQL database.
+This file contains:
 
-### Step 3
+Table creation
 
-Run the table creation script.
+Data exploration
 
-### Step 4
+Data cleaning
 
-Import the CSV dataset.
+SQL Business analysis
 
-### Step 5
+Load the dataset into pgAdmin or any other PostgreSQL client
 
-Execute the SQL analysis queries.
+Create a database and run the SQL file
 
-### Step 6
-
-Review generated insights and results.
+Import the dataset (convert to UTF-8 if necessary)
 
 ---
 
