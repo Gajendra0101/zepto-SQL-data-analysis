@@ -198,7 +198,7 @@ git clone https://github.com/amlanmohanty/zepto-SQL-data-analysis-project.git
 cd zepto-SQL-data-analysis-project
 ```
 
-###2. Open zepto_SQL_data_analysis.sql
+### 2. Open zepto_SQL_data_analysis.sql
 
 * This file contains:
 
