@@ -1,11 +1,13 @@
 # 🛒 Zepto E-Commerce SQL Data Analyst Portfolio Project
 
-This is a complete, real-world data analyst portfolio project based on an e-commerce inventory dataset scraped from Zepto — one of India’s fastest-growing quick-commerce startups. This project simulates real analyst workflows, from raw data exploration to business-focused data analysis.
+This is a complete, real-world data analyst portfolio project based on an e-commerce inventory dataset scraped from [Zepto](https://www.zepto.com/) — one of India’s fastest-growing quick-commerce startups. This project simulates real analyst workflows, from raw data exploration to business-focused data analysis.
 
 This project is perfect for:
 
 📊 Data Analyst aspirants who want to build a strong Portfolio Project for interviews and LinkedIn
+
 📚 Anyone learning SQL hands-on
+
 💼 Preparing for interviews in retail, e-commerce, or product analytics
 
 ---
@@ -24,31 +26,31 @@ This project is perfect for:
 
 ## 📁 Dataset Overview
 
-The dataset was sourced from [Kaggle][https://www.kaggle.com/datasets/palvinder2006/zepto-inventory-dataset/data?select=zepto_v2.csv] and originally scraped from Zepto's product catalog.
+The dataset was sourced from [Kaggle](https://www.kaggle.com/datasets/palvinder2006/zepto-inventory-dataset/data?select=zepto_v2.csv) and originally scraped from Zepto's product catalog.
 
 Each row represents a unique SKU (Stock Keeping Unit). Duplicate product names may appear because products can exist in multiple package sizes, weights, pricing structures, and promotional listings.
 
 🧾 Columns:
 
-sku_id: Unique identifier for each product entry (Synthetic Primary Key)
+* sku_id: Unique identifier for each product entry (Synthetic Primary Key)
 
-name: Product name as it appears on the app
+* name: Product name as it appears on the app
 
-category: Product category like Fruits, Snacks, Beverages, etc.
+* category: Product category like Fruits, Snacks, Beverages, etc.
 
-mrp: Maximum Retail Price (originally in paise, converted to ₹)
+* mrp: Maximum Retail Price (originally in paise, converted to ₹)
 
-discountPercent: Discount applied on MRP
+* discountPercent: Discount applied on MRP
 
-discountedSellingPrice: Final price after discount (also converted to ₹)
+* discountedSellingPrice: Final price after discount (also converted to ₹)
 
-availableQuantity: Units available in inventory
+* availableQuantity: Units available in inventory
 
-weightInGms: Product weight in grams
+* weightInGms: Product weight in grams
 
-outOfStock: Boolean flag indicating stock availability
+* outOfStock: Boolean flag indicating stock availability
 
-quantity: Number of units per package (mixed with grams for loose produce)
+* quantity: Number of units per package (mixed with grams for loose produce)
 
 ---
 
