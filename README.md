@@ -191,30 +191,30 @@ Zepto-SQL-Data-Analysis/
 ---
 
 ## 🛠️ How to Use This Project
-# 1. Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/amlanmohanty/zepto-SQL-data-analysis-project.git
 cd zepto-SQL-data-analysis-project
 ```
 
-Open zepto_SQL_data_analysis.sql
+###2. Open zepto_SQL_data_analysis.sql
 
-This file contains:
+**This file contains:
 
-Table creation
+**Table creation
 
-Data exploration
+**Data exploration
 
-Data cleaning
+**Data cleaning
 
-SQL Business analysis
+**SQL Business analysis
 
-Load the dataset into pgAdmin or any other PostgreSQL client
+### 3. Load the dataset into pgAdmin or any other PostgreSQL client
 
-Create a database and run the SQL file
+** Create a database and run the SQL file
 
-Import the dataset (convert to UTF-8 if necessary)
+** Import the dataset (convert to UTF-8 if necessary)
 
 ---
 
