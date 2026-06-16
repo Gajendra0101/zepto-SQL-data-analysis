@@ -75,8 +75,6 @@ CREATE TABLE zepto (
 );
 ```
 
----
-
 ## 2. Data Import
 Loaded CSV using pgAdmin's import feature.
 
@@ -89,8 +87,6 @@ If you're not able to use the import feature, write this code instead:
 ```
 
 * Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file using CSV UTF-8 format.
-
----
 
 ## 3. 🔍 Data Exploration
 * Counted the total number of records in the dataset
@@ -105,14 +101,10 @@ If you're not able to use the import feature, write this code instead:
 
 * Detected products present multiple times, representing different SKUs
 
----
-
 ## 4. 🧹 Data Cleaning
 * Identified and removed rows where MRP or discounted selling price was zero
 
 * Converted mrp and discountedSellingPrice from paise to rupees for consistency and readability
-
----
 
 ## 5. 📊 Business Insights
 * Found top 10 best-value products based on discount percentage
@@ -130,6 +122,7 @@ If you're not able to use the import feature, write this code instead:
 * Grouped products based on weight into Low, Medium, and Bulk categories
 
 * Measured total inventory weight per product category
+
 ---
 
 ### Data Quality Checks
