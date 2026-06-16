@@ -192,7 +192,7 @@ Zepto-SQL-Data-Analysis/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/amlanmohanty/zepto-SQL-data-analysis-project.git
+git clone https://github.com/Gajendra0101/zepto-SQL-data-analysis
 cd zepto-SQL-data-analysis-project
 ```
 
