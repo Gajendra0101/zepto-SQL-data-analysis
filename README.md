@@ -57,6 +57,7 @@ quantity: Number of units per package (mixed with grams for loose produce)
 Here’s a step-by-step breakdown of what we do in this project:
 
 1. Database & Table Creation
+
 We start by creating a SQL table with appropriate data types:
 
 ```sql
@@ -89,44 +90,46 @@ If you're not able to use the import feature, write this code instead:
 
 * Faced encoding issues (UTF-8 error), which were fixed by saving the CSV file using CSV UTF-8 format.
 
-### 3. 🔍 Data Exploration
-Counted the total number of records in the dataset
+---
 
-Viewed a sample of the dataset to understand structure and content
+## 3. 🔍 Data Exploration
+* Counted the total number of records in the dataset
 
-Checked for null values across all columns
+* Viewed a sample of the dataset to understand structure and content
 
-Identified distinct product categories available in the dataset
+* Checked for null values across all columns
 
-Compared in-stock vs out-of-stock product counts
+* Identified distinct product categories available in the dataset
 
-Detected products present multiple times, representing different SKUs
+* Compared in-stock vs out-of-stock product counts
+
+* Detected products present multiple times, representing different SKUs
 
 ---
 
 ## 4. 🧹 Data Cleaning
-Identified and removed rows where MRP or discounted selling price was zero
+* Identified and removed rows where MRP or discounted selling price was zero
 
-Converted mrp and discountedSellingPrice from paise to rupees for consistency and readability
+* Converted mrp and discountedSellingPrice from paise to rupees for consistency and readability
 
---
+---
 
-### 5. 📊 Business Insights
-Found top 10 best-value products based on discount percentage
+## 5. 📊 Business Insights
+* Found top 10 best-value products based on discount percentage
 
-Identified high-MRP products that are currently out of stock
+* Identified high-MRP products that are currently out of stock
 
-Estimated potential revenue for each product category
+* Estimated potential revenue for each product category
 
-Filtered expensive products (MRP > ₹500) with minimal discount
+* Filtered expensive products (MRP > ₹500) with minimal discount
 
-Ranked top 5 categories offering highest average discounts
+* Ranked top 5 categories offering highest average discounts
 
-Calculated price per gram to identify value-for-money products
+* Calculated price per gram to identify value-for-money products
 
-Grouped products based on weight into Low, Medium, and Bulk categories
+* Grouped products based on weight into Low, Medium, and Bulk categories
 
-Measured total inventory weight per product category
+* Measured total inventory weight per product category
 ---
 
 ### Data Quality Checks
