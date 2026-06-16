@@ -191,7 +191,7 @@ Zepto-SQL-Data-Analysis/
 ---
 
 ## 🛠️ How to Use This Project
-1. Clone the repository
+# 1. Clone the repository
 
 ```bash
 git clone https://github.com/amlanmohanty/zepto-SQL-data-analysis-project.git
